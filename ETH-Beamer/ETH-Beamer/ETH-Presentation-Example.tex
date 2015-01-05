@@ -1,0 +1,267 @@
+%  Example for the ETH Beamer template
+%  Copyright 2014 by
+%  Dr. Antonios Garas,
+%  Chair of Systems Design, ETH Zurich
+%  Weinbergstrasse 56/58 CH-8092 Zurich
+%
+\documentclass[
+%aspectratio=169,
+first,
+%handout,
+%compress,
+%Helv,
+ETH1,
+navigation
+]{ETHbeamerclass}
+
+% Options for beamer:
+%
+% compress: navigation bar becomes smaller
+% t       : place contents of frames on top (alternative: b,c)
+% handout : handoutversion
+% notes   : show notes
+% notes=onlyslideswithnotes
+%
+\setbeamertemplate{note page}{\ \\[.3cm]
+\textbf{\color{colorSG}Notes:}\\%[0.1cm]
+{\footnotesize %\tiny
+\insertnote}}
+
+\setbeameroption{hide notes}
+%\setbeameroption{show notes}
+
+\setbeamertemplate{navigation symbols}{} % suppresses all navigation symbols:
+% \setbeamertemplate{navigation symbols}[horizontal] % Organizes the navigation symbols horizontally.
+% \setbeamertemplate{navigation symbols}[vertical] % Organizes the navigation symbols vertically.
+% \setbeamertemplate{navigation symbols}[only frame symbol] % Shows only the navigational symbol for navigating frames.
+
+\usepackage{amsmath, amssymb}
+\usepackage{pifont}
+\usepackage{multimedia}
+
+%--------------------------------------------------------------------------------------------------------
+%--- Some custom definitions...
+
+\definecolor{cbf}{RGB}{199,100,95}%{163,15,0}
+\newcommand{\cbf}{\color{cbf}}
+
+\newcommand{\mean}[1]{\left\langle #1 \right\rangle}
+\newcommand{\abs}[1]{\left| #1 \right|}
+
+%--------------------------------------------------------------------------------------------------------
+%--- Inputs for the title page...
+
+\title{Distributed Monte Carlo Information\\
+Fusion and Distributed Particle Filtering
+}
+\newcommand{\shorttitle}{Shorter title}
+
+\author{wang junjie}
+\date{\today}
+\institute{ HIT --- School of Software}
+
+\newcommand{\collaborators}{}
+\newcommand{\event}{}
+\newcommand{\place}{HIT}
+
+\newcommand{\Prob}{\mathrm{Pr}}
+\newcommand{\sign}{\mathrm{sign}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\nbin}[1]{\mathrm{nb}_\mathrm{in}(#1)}
+\newcommand{\nbout}[1]{\mathrm{nb}_\mathrm{out}(#1)}
+\newcommand{\one}{\mathbb{\bf 1}}
+
+\newcommand{\sref}[1]{SLIDE \ref{#1}}
+
+%--------------------------------------------------------------------------------------------------------
+%--- Here begins the presentation...
+
+\begin{document}
+
+\frame{
+\maketitle
+}
+\note{}
+
+
+\section{About}
+
+\frame{
+
+  \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\note{}
+
+\frame{
+The International Federation of Automatic Control
+
+
+Cape Town, South Africa. August 24-29, 2014
+
+
+Australian National University and NICTA, Canberra Research Lab
+
+}
+
+
+\section{Abstract}
+
+\frame{
+
+  \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\note{}
+\frame{
+   we present a MC solution to the distributed data fusion problem and apply it to distributed particle filter.
+}
+
+\section{Introduction}
+\frame{
+
+  \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\note{}
+\frame{
+   Our approach to this problem is consensus-based and involves local exchange of posterior densities.The posteriors are exchanged via sets of unweighted particles.
+   
+   \begin{block}{attractive aspects}
+   
+    \begin{itemize}
+    \item  distributed
+    \item  robust
+    \item  has a guaranteed speed of convergence
+    \item  the resulting posterior distribution is guaranteed to be consistent as long al the dependence between the agents is understood
+     
+    \end{itemize}
+  \end{block}
+
+}
+
+\frame{
+    
+Hlinka, O., Hlawatsch, F., and Djuri¡äc, P.M. (2013).\\
+Distributed particle filtering in agent networks: A survey,
+classification, and comparison. IEEE Signal Processing
+Magazine, 30(1), 61¨C68.
+    
+}
+
+\section{Distributed MC data fusion}
+\frame{
+
+  \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\note{}
+
+\frame{
+
+
+
+
+}
+
+\frame{
+
+  \frametitle{This is the title of the first frame}
+
+  In this frame we use a block:
+  \begin{block}{Title of the block}
+  Contents of the block...\\
+  In one or more lines
+    \begin{itemize}
+    \item It can also include environments...
+     \begin{itemize}
+      \item It can also include environments...
+     \end{itemize}
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{}
+  Contents of the block...\\
+  In one or more lines
+    \begin{enumerate}
+     \item It can also include environments...
+    \end{enumerate}
+  \end{block}
+
+
+}
+\note{}
+
+\frame{
+
+  \frametitle{This is the title of the first frame}
+
+  In one or more lines
+    \begin{itemize}
+    \item It can also include environments...
+     \begin{itemize}
+      \item It can also include environments...
+     \end{itemize}
+%    \end{itemize}
+
+%    \begin{itemize}
+    \item It can also include environments...
+     \begin{itemize}
+      \item It can also include environments...
+     \end{itemize}
+    \end{itemize}
+
+    \begin{enumerate}
+     \item It can also include environments...
+    \end{enumerate}
+
+
+}
+\note{}
+
+\section{This is section two}
+
+\frame{
+
+  \frametitle{Let's use a long frame title that will be
+    displayed in two (or more) lines... This is not a good practice, but it may happen :-)}
+
+  \begin{columns}
+   \column{0.45\textwidth}
+   Now lets split the presentation using columns..
+
+  \column{0.45\textwidth}
+    In this frame we use a block:
+    \begin{block}{Title of the block}
+    Contents of the block...\\
+    In one or more lines
+    \begin{itemize}
+    \item It can also include environments...
+     \begin{itemize}
+      \item It can also include environments...
+      \end{itemize}
+     \end{itemize}
+    \end{block}
+  \end{columns}
+}
+\note{}
+
+\frame{
+
+  \frametitle{Contents}
+    \tableofcontents[currentsection]
+}
+\note{}
+
+
+\frame{
+
+  \frametitle{Summary..}
+
+
+  }
+\note{}
+
+
+\end{document}

@@ -1,0 +1,6 @@
+\beamer@endinputifotherversion {3.14pt}
+\beamer@sectionintoc {1}{About}{2}{0}{1}
+\beamer@sectionintoc {2}{Abstract}{4}{0}{2}
+\beamer@sectionintoc {3}{Introduction}{6}{0}{3}
+\beamer@sectionintoc {4}{Distributed MC data fusion}{9}{0}{4}
+\beamer@sectionintoc {5}{This is section two}{13}{0}{5}
